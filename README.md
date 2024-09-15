@@ -62,7 +62,7 @@ $  ./santa-dndump
 # Using JQ and Curl to Upload the Blocked Binary When Something is Blocked
 
 ```bash
-BLOCK_FILEPATH=$(./santa-dndump | jq '.file_path')
+BLOCKED_FILEPATH=$(./santa-dndump | jq '.file_path')
 
 curl -X POST -H "Content-Type: application/octet-stream" --data-binary "@$BLOCKED_FILEPATH" https://example.com/upload
 ```
