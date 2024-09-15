@@ -59,6 +59,8 @@ $  ./santa-dndump
 
 # Using JQ and Curl to Upload the Blocked Binary When Something is Blocked
 
+:warning: This is a best effort technique and not 100% reliable. :warning:
+
 ```bash
 #!/bin/sh
 # Script to upload a file that was blocked by Santa using curl.
