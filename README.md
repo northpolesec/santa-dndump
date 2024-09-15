@@ -1,9 +1,7 @@
-# santa-dndump
-Tool to wait for a Santa distributed notification block and print it to stdout
-
 # santa-dndump - A tool to listen for Santa's Distributed Notifications in a script
 
-Subscribes to Santa's distributed notifications for a single block and dumps data from associated user info to stdout.
+Subscribes to Santa's distributed notifications for a single block and dumps
+data from associated user info to stdout as JSON.
 
 Inspired by [dndump](https://github.com/nktzbkv/dndump).
 
@@ -62,7 +60,10 @@ $  ./santa-dndump
 # Using JQ and Curl to Upload the Blocked Binary When Something is Blocked
 
 ```bash
-BLOCKED_FILEPATH=$(./santa-dndump | jq '.file_path')
+#!/bin/sh
+# Script to upload a file that was blocked by Santa using curl.
+
+BLOCKED_FILEPATH=`./santa-dndump | jq '.file_path' | tr -d '"'`
 
 curl -X POST -H "Content-Type: application/octet-stream" --data-binary "@$BLOCKED_FILEPATH" https://example.com/upload
 ```
