@@ -53,7 +53,7 @@ int main(int argc, const char** argv) {
 
     int i = 1;
 
-    NSString* notificationName = @"com.google.santa.notification.blockedeexecution";
+    NSString* notificationName = @"com.northpolesec.santa.notification.blockedeexecution";
     notificationCount = 1;
 
     execute(argv[0], notificationName);
