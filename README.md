@@ -12,10 +12,10 @@ Clone or download, then run `make`
 
 # Usage 
 
-```
+```bash
 prompt$ ./santa-dndump
-
-$  ./santa-dndump 
+```
+```json
 {
   "file_path" : "\/usr\/bin\/osascript",
   "file_bundle_version" : "",
