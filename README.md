@@ -5,6 +5,7 @@ data from associated user info to stdout as JSON.
 
 Inspired by [dndump](https://github.com/nktzbkv/dndump).
 
+
 # Building 
 
 Clone or download, then run `make`
@@ -67,5 +68,6 @@ $  ./santa-dndump
 
 BLOCKED_FILEPATH=`./santa-dndump | jq '.file_path' | tr -d '"'`
 
-curl -X POST -H "Content-Type: application/octet-stream" --data-binary "@$BLOCKED_FILEPATH" https://example.com/upload
+curl -X POST -H "Content-Type: application/octet-stream" \
+  --data-binary "@$BLOCKED_FILEPATH" https://example.com/upload
 ```
